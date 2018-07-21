@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import './AddProduct.css';
-import { connect } from 'react-redux';
-import { addProduct } from '../../store/actions/admin';
 
 class AddProduct extends Component {
   constructor(props){
@@ -65,10 +63,4 @@ class AddProduct extends Component {
   }
 }
 
-function mapStateToProps(state){
-  return {
-    state: state.newProduct
-  }
-}
-
-export default connect(mapStateToProps, { addProduct })(AddProduct);
+export default AddProduct;
