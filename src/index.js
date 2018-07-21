@@ -12,6 +12,7 @@ import reducers from './store/reducers/index';
 import Header from './components/header/Header';
 import Landing from './components/landing/Landing';
 import AddProduct from './containers/AddProduct';
+import ShowProducts from './containers/ShowProducts';
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
@@ -22,6 +23,7 @@ ReactDOM.render(
       <div className="main-cont">
         <Header />
         <Switch>
+          <Route path="/products/all" component={ShowProducts} />
           <Route path="/products/add" component={AddProduct} />
           <Route path="/" component={Landing}/>
         </Switch>
