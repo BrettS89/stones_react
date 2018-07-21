@@ -1,17 +1,16 @@
 import React, { Component } from 'react';
 import './AddProduct.css';
 import { connect } from 'react-redux';
+import { addProduct } from '../../store/actions/admin';
 
 class AddProduct extends Component {
   constructor(props){
     super(props);
 
-    this.sate = {
-
-    }
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleSubmit(event){
+  async handleSubmit(event){
     event.preventDefault();
     const product = {
       name: event.target.name.value,
@@ -21,9 +20,14 @@ class AddProduct extends Component {
       shortDescription: event.target.shortDescription.value,
       description: event.target.description.value
     }
+    await this.props.addProduct(product);
   }
 
   render() {
+    if(this.props){
+      console.log(this.props);
+    }
+    
     return (
       <div className="add-product-container">
         <h2>Add a product</h2>
@@ -37,8 +41,7 @@ class AddProduct extends Component {
               <option value="Crystal Necklace">Crystal Necklace</option>
               <option value="Gemstone Necklace">Gemstone Necklace</option>
               <option value="Metal Necklace">Metal Necklace</option>
-              <option value="Sea Glass Jewelry">Sea Glass Jewelry</option>
-              
+              <option value="Sea Glass Jewelry">Sea Glass Jewelry</option>              
             </select>
           </div>
           <div className="form-group">
@@ -62,4 +65,10 @@ class AddProduct extends Component {
   }
 }
 
-export default AddProduct;
+function mapStateToProps(state){
+  return {
+    state: state.newProduct
+  }
+}
+
+export default connect(mapStateToProps, { addProduct })(AddProduct);
