@@ -23,6 +23,11 @@ ReactDOM.render(
       <div className="main-cont">
         <Header />
         <Switch>
+          <Route path="/products/sea-glass-jewelry" component={ShowProducts} />
+          <Route path="/products/metal-necklaces" component={ShowProducts} />
+          <Route path="/products/gemstone-necklaces" component={ShowProducts} />
+          <Route path="/products/crystal-necklaces" component={ShowProducts} />
+          <Route path="/products/pearl-necklaces" component={ShowProducts} />
           <Route path="/products/all" component={ShowProducts} />
           <Route path="/products/add" component={AddProduct} />
           <Route path="/" component={Landing}/>

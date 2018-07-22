@@ -35,11 +35,11 @@ class AddProduct extends Component {
           </div>
           <div className="form-group">
             <select name="type" id="type">
-              <option value="Pearl Necklace">Pearl Necklace</option>
-              <option value="Crystal Necklace">Crystal Necklace</option>
-              <option value="Gemstone Necklace">Gemstone Necklace</option>
-              <option value="Metal Necklace">Metal Necklace</option>
-              <option value="Sea Glass Jewelry">Sea Glass Jewelry</option>              
+              <option value="pearl-necklaces">Pearl Necklace</option>
+              <option value="crystal-necklaces">Crystal Necklace</option>
+              <option value="gemstone-necklaces">Gemstone Necklace</option>
+              <option value="metal-necklaces">Metal Necklace</option>
+              <option value="sea-glass-jewelry">Sea Glass Jewelry</option>              
             </select>
           </div>
           <div className="form-group">
