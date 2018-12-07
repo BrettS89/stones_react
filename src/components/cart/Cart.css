@@ -1,0 +1,40 @@
+.cart-container hr{
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.cart-container button {
+  margin-bottom: 20px;
+}
+
+.checkout-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cart-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.products-display{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.last-product{
+  display: flex;
+  width: 360px;
+}
+
+.remove-link {
+  font-size: 14px;
+  color: #E44D2E;
+  margin-top: 9px;
+}
+
+.remove-link:hover {
+  cursor: pointer;
+}

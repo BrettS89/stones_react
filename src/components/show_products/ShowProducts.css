@@ -15,14 +15,21 @@
   width: 360px;
   height: 240px;
   object-fit: cover;
+  cursor: pointer;
 }
 
 .product-card h4{
   margin-top: 10px; 
   margin-bottom: 4px;
+  cursor: pointer;
 }
 
 .products hr{
   margin-top: 10px;
   margin-bottom: 40px;
+}
+
+.last-product{
+  display: flex;
+  width: 360px;
 }

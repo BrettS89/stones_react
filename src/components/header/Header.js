@@ -26,16 +26,10 @@ class Header extends Component {
           <div className="collapse navbar-collapse" id="navbarColor01">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item">
-                <Link className="nav-link" to="/products/pearl-necklaces">Pearl Necklaces</Link>
+                <Link className="nav-link" to="/products/necklaces">Necklaces</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/products/gemstone-necklaces">Gemstone Necklaces</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/products/metal-necklaces">Metal Necklaces</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/products/sea-glass-jewelry">Sea Glass Jewelry</Link>
+                <Link className="nav-link" to="/products/necklace-sets">Necklace Sets</Link>
               </li>
             </ul>
             <ul className="navbar-nav ml-auto">
@@ -47,7 +41,7 @@ class Header extends Component {
                 <a className="nav-link" href="#">Contact</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#" id="cart-icon"><i className="fas fa-shopping-bag fa-2x"></i></a>
+                <Link className="nav-link" to="/cart" id="cart-icon"><i className="fas fa-shopping-bag fa-2x"></i></Link>
               </li>
             </ul>  
           </div>      
