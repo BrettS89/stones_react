@@ -10,7 +10,6 @@ class ProductDetail extends Component{
 
   async componentWillMount(){
     await this.props.getProductDetail(this.props.match.params.id);
-    console.log(this.props);
   }
 
   addToCart(){
@@ -18,7 +17,6 @@ class ProductDetail extends Component{
   }
 
   render(){
-    console.log(this.props);
     if(this.props.product.product){
       const { image, name, price, description } = this.props.product.product
       return(

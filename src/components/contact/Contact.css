@@ -1,0 +1,17 @@
+.contact-container hr {
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.add-product-form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin: 30px auto;
+  margin-bottom: 60px;
+  align-items: center;
+}
+
+.add-product-form h4 {
+  margin-bottom: 30px;
+}

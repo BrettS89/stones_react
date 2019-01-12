@@ -14,11 +14,31 @@ class Header extends Component {
         <Link className="nav-link" to="/products/add">Add Product</Link>
       </li>
 
+  renderAddProducts = () => {
+    if(localStorage.getItem('_id')) {
+      return (
+        <li className="nav-item">
+          <Link className="nav-link" to="/products/add">Add Product</Link>
+        </li>
+      );
+    }
+  };
+
+  renderOrders = () => {
+    if(localStorage.getItem('_id')) {
+      return (
+        <li className="nav-item">
+          <Link className="nav-link" to="/orderlist">Orders</Link>
+        </li>
+      );
+    }
+  };
+
   render() {
 
     return (
       <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-          <Link className="navbar-brand" to="/">Stones by Sue</Link>
+          <Link className="navbar-brand" to="/">Stones by Susan</Link>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -26,19 +46,20 @@ class Header extends Component {
           <div className="collapse navbar-collapse" id="navbarColor01">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item">
-                <Link className="nav-link" to="/products/necklaces">Necklaces</Link>
+                <Link className="nav-link" to="/products/necklaces">Jewelry</Link>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link className="nav-link" to="/products/necklace-sets">Necklace Sets</Link>
-              </li>
+              </li> */}
             </ul>
             <ul className="navbar-nav ml-auto">
-              {this.state.admin ? this.addProduct : ''}
-              <li className="nav-item">
+              {this.renderOrders()}
+              {this.renderAddProducts()}
+              {/* <li className="nav-item">
                 <a className="nav-link" href="#">About</a>
-              </li>
+              </li> */}
               <li className="nav-item">
-                <a className="nav-link" href="#">Contact</a>
+                <Link className="nav-link" to="/contact">Contact</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/cart" id="cart-icon"><i className="fas fa-shopping-bag fa-2x"></i></Link>
